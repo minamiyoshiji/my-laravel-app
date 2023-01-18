@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3bbf9fe015dab62e48e0fb4e8da36311",
+    "content-hash": "af191b6f3af29aef00ee71de72ab6ce1",
     "packages": [
         {
             "name": "brick/math",
@@ -942,6 +942,317 @@
             "time": "2022-10-26T14:07:24+00:00"
         },
         {
+            "name": "infyomlabs/adminlte-templates",
+            "version": "v5.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/InfyOmLabs/adminlte-templates.git",
+                "reference": "a10d401a17659316a8703f30b1b66ef904f3b0a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/InfyOmLabs/adminlte-templates/zipball/a10d401a17659316a8703f30b1b66ef904f3b0a3",
+                "reference": "a10d401a17659316a8703f30b1b66ef904f3b0a3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^9.0",
+                "illuminate/view": "^9.0",
+                "infyomlabs/laravel-ui-adminlte": "^5.0",
+                "php": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "\\InfyOm\\AdminLTETemplates\\AdminLTETemplatesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "InfyOm\\AdminLTETemplates\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mitul Golakiya",
+                    "email": "me@mitul.me"
+                }
+            ],
+            "description": "AdminLTE templates for InfyOm Laravel Generator",
+            "keywords": [
+                "AdminLTE",
+                "bootstrap",
+                "generator",
+                "infyom",
+                "laravel",
+                "templates"
+            ],
+            "support": {
+                "issues": "https://github.com/InfyOmLabs/adminlte-templates/issues",
+                "source": "https://github.com/InfyOmLabs/adminlte-templates/tree/v5.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/infyomlabs",
+                    "type": "opencollective"
+                }
+            ],
+            "time": "2022-07-25T05:03:52+00:00"
+        },
+        {
+            "name": "infyomlabs/laravel-generator",
+            "version": "v5.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/InfyOmLabs/laravel-generator.git",
+                "reference": "16e8cd5ffc90951bb1b43aaa18eea5aa89be8347"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/InfyOmLabs/laravel-generator/zipball/16e8cd5ffc90951bb1b43aaa18eea5aa89be8347",
+                "reference": "16e8cd5ffc90951bb1b43aaa18eea5aa89be8347",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^9.0",
+                "illuminate/support": "^9.0",
+                "laracasts/flash": "^3.2",
+                "laravelcollective/html": "^6.3",
+                "php": "^8.0",
+                "symfony/var-exporter": "^6.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4.4",
+                "orchestra/testbench": "^7.5",
+                "pestphp/pest": "^1.21",
+                "pestphp/pest-plugin-laravel": "^1.2",
+                "phpunit/phpunit": "^9.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "\\InfyOm\\Generator\\InfyOmGeneratorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "InfyOm\\Generator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mitul Golakiya",
+                    "email": "me@mitul.me"
+                }
+            ],
+            "description": "InfyOm Laravel Generator",
+            "keywords": [
+                "api",
+                "crud",
+                "generator",
+                "laravel",
+                "migration",
+                "model",
+                "repository",
+                "request",
+                "swagger",
+                "test",
+                "view"
+            ],
+            "support": {
+                "issues": "https://github.com/InfyOmLabs/laravel-generator/issues",
+                "source": "https://github.com/InfyOmLabs/laravel-generator/tree/v5.4.2"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/infyomlabs",
+                    "type": "opencollective"
+                }
+            ],
+            "time": "2022-12-22T04:56:13+00:00"
+        },
+        {
+            "name": "infyomlabs/laravel-generator-helpers",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/InfyOmLabs/laravel-generator-helpers.git",
+                "reference": "89a83f334a8cfa16bbbad2c60218c9e66536cf9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/InfyOmLabs/laravel-generator-helpers/zipball/89a83f334a8cfa16bbbad2c60218c9e66536cf9a",
+                "reference": "89a83f334a8cfa16bbbad2c60218c9e66536cf9a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^9.0",
+                "php": "^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "InfyOm\\GeneratorHelpers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mitul Golakiya",
+                    "email": "me@mitul.me"
+                }
+            ],
+            "description": "Helper functions for laravel generator packages",
+            "support": {
+                "issues": "https://github.com/InfyOmLabs/laravel-generator-helpers/issues",
+                "source": "https://github.com/InfyOmLabs/laravel-generator-helpers/tree/v4.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/infyomlabs",
+                    "type": "opencollective"
+                }
+            ],
+            "time": "2022-02-22T10:02:37+00:00"
+        },
+        {
+            "name": "infyomlabs/laravel-ui-adminlte",
+            "version": "v5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/InfyOmLabs/laravel-ui-adminlte.git",
+                "reference": "61aab3f160169d56acfb91e29b66dff9cb365967"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/InfyOmLabs/laravel-ui-adminlte/zipball/61aab3f160169d56acfb91e29b66dff9cb365967",
+                "reference": "61aab3f160169d56acfb91e29b66dff9cb365967",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^9.0",
+                "infyomlabs/laravel-generator-helpers": "^4.0",
+                "laravel/ui": "^3.0",
+                "php": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "InfyOm\\AdminLTEPreset\\AdminLTEPresetServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "InfyOm\\AdminLTEPreset\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mitul Golakiya",
+                    "email": "me@mitul.me"
+                }
+            ],
+            "description": "Laravel frontend preset for AdminLTE Theme",
+            "keywords": [
+                "AdminLTE",
+                "laravel",
+                "preset"
+            ],
+            "support": {
+                "issues": "https://github.com/InfyOmLabs/laravel-ui-adminlte/issues",
+                "source": "https://github.com/InfyOmLabs/laravel-ui-adminlte/tree/v5.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/infyomlabs",
+                    "type": "opencollective"
+                }
+            ],
+            "time": "2022-07-22T08:40:06+00:00"
+        },
+        {
+            "name": "laracasts/flash",
+            "version": "3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracasts/flash.git",
+                "reference": "f64a8d97f901fdb3ce8eb9b28c5308a726455467"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracasts/flash/zipball/f64a8d97f901fdb3ce8eb9b28c5308a726455467",
+                "reference": "f64a8d97f901fdb3ce8eb9b28c5308a726455467",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0|^6.0|^7.0|^8.0|^9.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "^6.1|^9.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laracasts\\Flash\\FlashServiceProvider"
+                    ],
+                    "aliases": {
+                        "Flash": "Laracasts\\Flash\\Flash"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Laracasts/Flash/functions.php"
+                ],
+                "psr-0": {
+                    "Laracasts\\Flash": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Way",
+                    "email": "jeffrey@laracasts.com"
+                }
+            ],
+            "description": "Easy flash notifications",
+            "support": {
+                "issues": "https://github.com/laracasts/flash/issues",
+                "source": "https://github.com/laracasts/flash/tree/3.2.1"
+            },
+            "time": "2022-01-31T16:01:37+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v9.47.0",
             "source": {
@@ -1323,32 +1634,32 @@
         },
         {
             "name": "laravel/ui",
-            "version": "v4.2.0",
+            "version": "v3.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/ui.git",
-                "reference": "810adddcf4e2538b0d1ed470c3a5220ffe761370"
+                "reference": "65ec5c03f7fee2c8ecae785795b829a15be48c2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/ui/zipball/810adddcf4e2538b0d1ed470c3a5220ffe761370",
-                "reference": "810adddcf4e2538b0d1ed470c3a5220ffe761370",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/65ec5c03f7fee2c8ecae785795b829a15be48c2c",
+                "reference": "65ec5c03f7fee2c8ecae785795b829a15be48c2c",
                 "shasum": ""
             },
             "require": {
-                "illuminate/console": "^9.21|^10.0",
-                "illuminate/filesystem": "^9.21|^10.0",
-                "illuminate/support": "^9.21|^10.0",
-                "illuminate/validation": "^9.21|^10.0",
-                "php": "^8.0"
+                "illuminate/console": "^8.42|^9.0",
+                "illuminate/filesystem": "^8.42|^9.0",
+                "illuminate/support": "^8.82|^9.0",
+                "illuminate/validation": "^8.42|^9.0",
+                "php": "^7.3|^8.0"
             },
             "require-dev": {
-                "orchestra/testbench": "^7.0|^8.0"
+                "orchestra/testbench": "^6.23|^7.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.x-dev"
+                    "dev-master": "3.x-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -1378,9 +1689,81 @@
                 "ui"
             ],
             "support": {
-                "source": "https://github.com/laravel/ui/tree/v4.2.0"
+                "source": "https://github.com/laravel/ui/tree/v3.4.6"
             },
-            "time": "2023-01-10T12:13:29+00:00"
+            "time": "2022-05-20T13:38:08+00:00"
+        },
+        {
+            "name": "laravelcollective/html",
+            "version": "v6.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "78c3cb516ac9e6d3d76cad9191f81d217302dea6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/78c3cb516ac9e6d3d76cad9191f81d217302dea6",
+                "reference": "78c3cb516ac9e6d3d76cad9191f81d217302dea6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/routing": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/session": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/view": "^6.0|^7.0|^8.0|^9.0",
+                "php": ">=7.2.5"
+            },
+            "require-dev": {
+                "illuminate/database": "^6.0|^7.0|^8.0|^9.0",
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~8.5|^9.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Collective\\Html\\HtmlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Form": "Collective\\Html\\FormFacade",
+                        "Html": "Collective\\Html\\HtmlFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                },
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "https://laravelcollective.com",
+            "support": {
+                "issues": "https://github.com/LaravelCollective/html/issues",
+                "source": "https://github.com/LaravelCollective/html"
+            },
+            "time": "2022-02-08T21:02:54+00:00"
         },
         {
             "name": "league/commonmark",
@@ -5183,6 +5566,78 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/var-dumper/tree/v6.0.17"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-12-22T17:53:58+00:00"
+        },
+        {
+            "name": "symfony/var-exporter",
+            "version": "v6.0.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-exporter.git",
+                "reference": "d87c15d59421d38fe5eb4f6724eb75891479e3da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/d87c15d59421d38fe5eb4f6724eb75891479e3da",
+                "reference": "d87c15d59421d38fe5eb4f6724eb75891479e3da",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2"
+            },
+            "require-dev": {
+                "symfony/var-dumper": "^5.4|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\VarExporter\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Allows exporting any serializable PHP data structure to plain PHP code",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "clone",
+                "construct",
+                "export",
+                "hydrate",
+                "instantiate",
+                "serialize"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/var-exporter/tree/v6.0.17"
             },
             "funding": [
                 {
