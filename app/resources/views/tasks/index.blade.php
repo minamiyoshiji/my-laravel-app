@@ -43,7 +43,7 @@
 <h1>タスク一覧</h1>
 <div class="container">
   <div class="task__add">
-      <a href="{{ route('tasks.add') }}">＋仕事を追加する</a>
+      <a href="{{ route('tasks.add') }}">＋タスクを追加する</a>
   </div>
     <table>
         <tr>
