@@ -1,22 +1,18 @@
-name: CI
-
+name: deploy
 on:
   push:
-    branches:
-      - master
-
+    branches: [master]
 jobs:
-  build:
+  web-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Deploy
-        uses: appleboy/ssh-action@master
+      - name: get lastest code
+        uses: actions/checkout@v3
+      - name: sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          port: ${{ secrets.SSH_PORT }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd ${{ secrets.SERVER_DEPLOY_DIR }}
-            git pull origin master
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /public_html/my-laravel-app/
