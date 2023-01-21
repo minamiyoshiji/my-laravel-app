@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/folders/{id}/tasks';
 
     /**
      * Create a new controller instance.
