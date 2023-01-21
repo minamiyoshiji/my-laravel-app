@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TasksController;
+use App\Http\Controllers\TaskController;
+use App\Http\Controllers\FolderController;
+use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,26 +20,25 @@ use App\Http\Controllers\TasksController;
 //     return view('welcome');
 // });
 
-Route::get('/', [TasksController::class, 'index'])->name('tasks.index');
 
-// 詳細ページ
-Route::get('/{id}', [TasksController::class, 'show'])->name('tasks.show');
+Route::group(['middleware' => 'auth'], function() {
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// タスク追加
-Route::get('/tasks/add', [TasksController::class, 'add'])->name('tasks.add');
+//フォルダ一覧
+Route::get('/folders/{id}/tasks', [TaskController::class, 'index'])->name('tasks.index');
 
-// タスク追加-DBに値を入れる処理
-Route::post('/tasks/add', [TasksController::class, 'store'])->name('tasks.store');
+//フォルダ追加機能
+Route::get('/folders/create', [FolderController::class, 'showCreateForm'])->name('folders.create');
+Route::post('/folders/create', [FolderController::class, 'create']);
 
-// タスク編集画面
-Route::get('/tasks/edit/{id}', [TasksController::class, 'edit'])->name('tasks.edit');
+//タスク追加機能
+Route::get('/folders/{id}/tasks/create', [TaskController::class, 'showCreateForm'])->name('tasks.create');
+Route::post('/folders/{id}/tasks/create', [TaskController::class, 'create']);
 
-// タスク更新処理
-Route::post('tasks/edit/{id}', [TasksController::class, 'update'])->name('tasks.update');
+//タスク編集機能
+Route::get('/folders/{id}/tasks/{task_id}/edit', [TaskController::class, 'showEditForm'])->name('tasks.edit');
+Route::post('/folders/{id}/tasks/{task_id}/edit', [TaskController::class, 'edit']);
 
-// タスクを削除する
-Route::post('tasks/delete/{id}', [TasksController::class, 'delete'])->name('tasks.delete');
+});
 
-// Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
