@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-      Schema::create('tasks', function (Blueprint $table) {
-          $table->id();
-          $table->string('name', 30);
-          $table->text('content');
-          $table->timestamps(); // これでcreated_atとupdated_atが作成されます。
+      Schema::create('folders', function (Blueprint $table) {
+          $table->increments('id');
+          $table->string('title', 20);
+          $table->timestamps();
         });
     }
 
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tasks');
+        Schema::dropIfExists('folders');
     }
 };

@@ -1,67 +1,66 @@
-<style>
-    h1 {
-        text-align: center;
-        padding: 30px;
-    }
-    .container {
-        width: 80%;
-        margin: 0 auto;
-    }
+@extends('layout')
 
-    .task__add {
-        text-align: right;
-        padding-bottom: 10px;
-    }
-
-    table {
-        border-spacing: 0;
-        border-collapse: collapse;
-        border-bottom: 1px solid #aaa;
-        color: #555;
-        width: 100%;
-    }
-    th {
-        border-top: 1px solid #aaa;
-        background-color: #f5f5f5;
-        padding: 10px 0 10px 6px;
-        text-align: center;
-    }
-    .td1 {
-        border-top: 1px solid #aaa;
-        padding: 10px 0 10px 6px;
-        text-align: center;
-    }
-    .td2 {
-        border-top: 1px solid #aaa;
-        padding: 10px 0 10px 6px;
-        display: flex;
-        justify-content: center;
-    }    a {
-        margin-right: 20px;
-    }
-</style>
-<h1>タスク一覧</h1>
-<div class="container">
-  <div class="task__add">
-      <a href="{{ route('tasks.add') }}">＋タスクを追加する</a>
+@section('content')
+  <div class="container">
+    <div class="row">
+      <div class="col col-md-4">
+        <nav class="panel panel-default">
+          <div class="panel-heading">フォルダ</div>
+          <div class="panel-body">
+            <a href="{{ route('folders.create') }}" class="btn btn-default btn-block">
+              フォルダを追加する
+            </a>
+          </div>
+          <div class="list-group">
+            @foreach($folders as $folder)
+              <a
+                  href="{{ route('tasks.index', ['id' => $folder->id]) }}"
+                  class="list-group-item {{ $current_folder_id === $folder->id ? 'active' : '' }}"
+              >
+                {{ $folder->title }}
+              </a>
+            @endforeach
+          </div>
+        </nav>
+      </div>
+      <div class="column col-md-8">
+        <div class="panel panel-default">
+          <div class="panel-heading">タスク</div>
+          <div class="panel-body">
+            <div class="text-right">
+              <a href="{{ route('tasks.create', ['id' => $current_folder_id]) }}" class="btn btn-default btn-block">
+                タスクを追加する
+              </a>
+            </div>
+          </div>
+          <table class="table">
+            <thead>
+            <tr>
+              <th>タイトル</th>
+              <th>状態</th>
+              <th>期限</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($tasks as $task)
+              <tr>
+                <td>{{ $task->title }}</td>
+                <td>
+                  <span class="label {{ $task->status_class }}">{{ $task->status_label }}</span>
+                </td>
+                <td>{{ $task->formatted_due_date }}</td>
+                <td>
+                  <a href="{{ route('tasks.edit', ['id' => $task->folder_id, 'task_id' => $task->id]) }}">
+                    編集
+                  </a>
+                </td>
+              </tr>
+            @endforeach
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
-    <table>
-        <tr>
-            <th>タスク</th>
-            <th>アクション</th>
-        </tr>
-        @foreach ($tasks as $task)
-        <tr>
-            <td class="td1">{{ $task->name }}</td>
-            <td class="td2">
-                <a href="{{ route('tasks.show', ['id' => $task->id]) }}">詳細</a>
-                <a href="{{ route('tasks.edit', ['id' => $task->id]) }}">編集</a>
-                <form action="{{ route('tasks.delete', ['id' => $task->id]) }}" method="POST" name="deleteForm">
-                  @csrf
-                      <button type="submit">削除</button>
-                  </form>
-            </td>
-        </tr>
-        @endforeach
-    </table>
-</div>
+@endsection

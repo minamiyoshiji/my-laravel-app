@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TasksRequest extends FormRequest
+class CreateTask extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -19,24 +19,28 @@ class TasksRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, mixed>
+     * @return array
      */
     public function rules()
     {
         return [
-          'name' => 'required|max:30', // 必須、30文字以内
-          'content' => 'required', // 必須
+            'title' => 'required|max:100',
+            'due_date' => 'required|date|after_or_equal:today',
         ];
     }
-    /**
-     * エラーメッセージ
-     */
+
+    public function attributes()
+    {
+        return [
+            'title' => 'タイトル',
+            'due_date' => '期限日',
+        ];
+    }
+
     public function messages()
     {
         return [
-            'name.required' => 'タスクは必須です',
-            'name.max' => 'タスクは30文字以内で入力してください',
-            'content.required' => 'タスク内容は必須です',
+            'due_date.after_or_equal' => ':attribute には今日以降の日付を入力してください。',
         ];
     }
 }
